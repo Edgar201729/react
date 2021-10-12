@@ -1,0 +1,70 @@
+.info {
+  height: 55vh;
+  background: url("img/5.jpg") center center  no-repeat; 
+  background-blend-mode: multiply;
+  background-color: #F7F3F3;
+  border: 2px solid #1f1f1f;
+  border-right: 2px solid #131e29;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+}
+
+.form {
+  height: 55vh;
+  padding-top: 100px;
+  padding-left: 50px;
+  border-top: 2px solid #113a65;
+  border-bottom: 2px solid #113a65;
+  border-right: 2px solid #113a65;
+  color: white;
+  font-size: 17px;
+}
+
+
+.status {
+  margin: 8px;
+  font-size: 20px;
+  font-family: Arial;
+}
+
+.game-board {
+  margin: 75px;
+  text-align: center;
+}
+
+
+button {
+  height: 50px;
+  width: 50px;
+  font-size: 33px;
+  border: 2px solid #103a65;
+  border-bottom: 3px solid #103a65;
+  padding: 6px 12px;
+  margin: 2px;
+  border-radius: 1px;
+  cursor: pointer;
+  background-color: #235d9c;
+  color: #fff;
+  outline: none!important;
+}
+
+button:hover {
+  border-bottom: 2px solid #103a65;
+  position: relative;
+  top: 1px;
+}
+
+button:active {
+  border-bottom: 2px solid transparent;
+  border-color: transparent;
+  position: relative;
+  top: 1px;
+}
+
+
+
+

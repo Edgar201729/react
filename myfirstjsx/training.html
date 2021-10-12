@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Training week</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+  </head>
+  <body>
+   <h2>Rabbits farming control</h2>
+<div id="container"></div>
+
+<script type="text/babel">
+
+class Task extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      edit: false,
+    };
+  };
+  added = (()=> {
+    this.props.add()
+  });
+  edit = () => {
+    this.setState ({edit: true});
+  };
+  remove = () => {
+    this.props.deleteBlock(this.props.index);
+  };
+  save = () => {
+    this.props.update(this.refs.newTxt.value, this.props.index)
+    this.setState ({edit: false})
+  };
+  rendNorm = () => {
+    return (
+      <div className="box">
+        <input className="inputClass" type="date" />
+        <img src="images/Calif.jpg" width="105" height="100" />
+        <div id="textId" className="text">{this.props.children}</div>
+        <button onClick={this.edit} className="btn light">Edit</button>
+        <button onClick={this.remove} className="btn red">Delete</button>
+      </div>
+    );
+  };
+  rendEdit = () => {
+    return (
+      <div className="box">
+        <textarea id="textareaId" className="textareaClass" placeholder="Describe yourself here" ref="newTxt" defaultValue={this.props.children}></textarea>
+        <br />
+        <button onClick={this.save} className="btn success">Save</button>
+      </div>
+    );
+  };
+  render() {
+    if (this.state.edit) {
+      return this.rendEdit ();
+    } else {
+      return this.rendNorm ();
+    }
+  }
+}
+
+class Field extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tasks: [
+        "Californian white, ID-M001, weight-3.7kg, kids-10"  
+      ]
+    };
+  };
+  add = ((text) => {
+    var arr = this.state.tasks;
+    arr.push(text);
+    this.setState ({tasks: arr})
+  });
+  deleteBlock = (i) => {
+    var arr = this.state.tasks;
+    arr.splice (i, 1);
+    this.setState ({tasks: arr});
+  };
+  updateText = (text, i) => {
+    var arr = this.state.tasks;
+    arr[i] = text;
+    this.setState ({tasks: arr});
+  };
+  eachTask = (item, i) => {
+    return (
+      <Task key={i} index={i} update={this.updateText} deleteBlock={this.deleteBlock} add={this.add}>
+        {item}
+      </Task>
+    );
+  };
+  render() {
+    return (
+      <div className="field">
+        <button onClick={this.add.bind(null, "Californian rabbit, ID-A001, weght-3kg, Californian rabbit, ID-A001, weght-3kg")} className="btn add">Create new rabbit</button>
+        {this.state.tasks.map (this.eachTask)}
+      </div>
+    );
+  }
+}
+
+let app = document.getElementById("container");
+
+ReactDOM.render(
+  <div className="field">
+    <Field />
+  </div>,
+  app
+)
+
+const divInfo = document.getElementById("newDiv");
+const textInfo = document.getElementById("textareaId");
+console.log(textInfo);
+console.log(divInfo);
+localStorage.setItem("text", textInfo);
+console.log(localStorage.key(0));
+
+divInfo.innerText = localStorage.key(1);
+
+</script>
+
+<div id="newDiv">dd</div>
+
+  </body>
+</html

@@ -1,0 +1,224 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 0px;
+}
+body{
+    background-color: #070707;
+}
+.all{
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -100px;
+    position: absolute;
+    left: calc(30% - 100px);
+    top: 50px;
+    width: 400px;
+    height: 400px;
+    transform: rotateX(-10deg);
+}
+.box{
+    left: calc(50% - 100px);
+    top: 100px;
+    transform-style: preserve-3d;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    animation: 10s rotate linear infinite;
+}
+.koxm{
+
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 4px dashed;
+    border-radius: 200px;
+}
+.k1{
+    background-color: transparent;
+    border-color: #D8D81E;
+}
+.k2{
+    transform:rotateX(45deg);
+    background-color:transparent;
+    border-color: #053D13;
+}
+.k3{
+    transform:rotateX(-45deg);
+    background-color: transparent;
+    border-color: #FF5100;
+}
+.k4{
+    transform:rotateY(90deg);
+    background-color: transparent;
+    border-color: #054150;
+}
+.k5{
+    transform:rotateY(-90deg);
+    background-color: transparent;
+    border-color: #15FF00;
+}
+.k6{
+    transform:rotateX(135deg);
+    background-color: transparent;
+    border-color: #00FF88;
+}
+.k7{
+    transform:rotateX(-135deg);
+    background-color: transparent;
+    border-color: #3700FF;
+}
+.k8{
+    transform:rotateY(180deg);
+    background-color: transparent;
+    border-color: #00B7FF;
+}
+.k9{
+    transform:rotateY(-180deg);
+    background-color: transparent;
+    border-color: #0066FF;
+}
+.k10{
+    transform:rotateX(225deg);
+    background-color: transparent;
+    border-color: #FF0000;
+}
+.k11{
+    transform:rotateX(-225deg);
+    background-color: transparent;
+    border-color: #4C00FF;
+}
+.k12{
+    transform:rotateY(270deg);
+    background-color: transparent;
+    border-color: #AE00FF;
+}
+.k13{
+    transform:rotateY(-270deg);
+    background-color: transparent;
+    border-color: #EA00FF;
+}
+.k14{
+    transform:rotateX(315deg);
+    background-color: transparent;
+    border-color: #FF006A;
+}
+.k15{
+    transform:rotateX(-315deg);
+    background-color: transparent;
+    border-color: #1100FF;
+}
+.k16{
+    transform:rotateY(360deg);
+    background-color: transparent;
+    border-color: #00D9FF;
+}
+.k17{
+    transform:rotateY(-360deg);
+    background-color: transparent;
+    border-color: #642456;
+}
+
+.k18{
+    transform:rotateX(20deg);
+    background-color:transparent;
+    border-color: #053D13;
+}
+.k19{
+    transform:rotateX(-20deg);
+    background-color: transparent;
+    border-color: #FF5100;
+}
+.k20{
+    transform:rotateY(70deg);
+    background-color: transparent;
+    border-color: #054150;
+}
+.k21{
+    transform:rotateY(-70deg);
+    background-color: transparent;
+    border-color: #15FF00;
+}
+.k22{
+    transform:rotateX(110deg);
+    background-color: transparent;
+    border-color: #00FF88;
+}
+.k23{
+    transform:rotateX(-110deg);
+    background-color: transparent;
+    border-color: #3700FF;
+}
+.k24{
+    transform:rotateY(140deg);
+    background-color: transparent;
+    border-color: #00B7FF;
+}
+.k25{
+    transform:rotateY(-140deg);
+    background-color: transparent;
+    border-color: #0066FF;
+}
+.k26{
+    transform:rotateX(200deg);
+    background-color: transparent;
+    border-color: #FF0000;
+}
+.k27{
+    transform:rotateX(-200deg);
+    background-color: transparent;
+    border-color: #4C00FF;
+}
+.k28{
+    transform:rotateY(250deg);
+    background-color: transparent;
+    border-color: #AE00FF;
+}
+.k29{
+    transform:rotateY(-250deg);
+    background-color: transparent;
+    border-color: #EA00FF;
+}
+.k30{
+    transform:rotateX(290deg);
+    background-color: transparent;
+    border-color: #FF006A;
+}
+.k31{
+    transform:rotateX(-290deg);
+    background-color: transparent;
+    border-color: #1100FF;
+}
+.k32{
+    transform:rotateY(340deg);
+    background-color: transparent;
+    border-color: #00D9FF;
+}
+.k33{
+    transform:rotateY(-340deg);
+    background-color: transparent;
+    border-color: #642456;
+}
+@keyframes rotate{
+    0%{
+        transform: rotateY(0deg)
+    }
+    20%{
+        transform: rotateX(100deg)
+    }
+    40%{
+        transform: rotateY(100deg)
+    }
+    60%{
+        transform: rotateY(-100deg)
+    }
+    80%{
+        transform: rotateX(100deg)
+    }
+    100%{
+    transform: rotateX(0deg)
+    }
+}
+.box:hover{
+    animation-play-state: running;
+}

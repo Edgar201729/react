@@ -1,0 +1,130 @@
+body {
+  background-image: url("background-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h2 {
+  font-size: 40px;
+  text-align: center;
+  color: rgba(4, 48, 90, 0.95);;
+}
+
+.field {
+  display: flex;
+  padding: 10px;
+  width: 80%;
+  margin-left: 5%;
+  color: #10064D;
+  font-size: 1.1em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  border: 1.5px solid #474747;
+  background-color: rgba(94, 141, 98, 0.95);
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.text {
+  text-align: center;
+  border: 1px solid #676B53;
+  border-radius: 10px;
+  background-color: #DADADA;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 8px;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+.box:last-child {
+  margin-bottom: 0;
+}
+
+button.btn {
+  margin-right: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.65em;
+  color: #fff;
+  outline: none;
+}
+
+.btn.light {
+  background-color: #A86771;
+  border: 1px solid #0C0C0C;
+  border-radius: 5px;
+  margin-left: 27%;
+}
+
+.btn.red {
+  background-color: #C9884F;
+  border: 1px solid #2E220B;
+  border-radius: 5px;
+}
+
+.btn.success {
+  background-color: #23405A;
+  border: 1px solid #080806;
+  border-radius: 5px;
+  margin-left: 44%;
+}
+
+.btn.light:hover {
+  background-color: #A74353;
+  border-color: #A74353;
+}
+
+.btn.red:hover {
+  background-color: #CA6F1E;
+  border-color: #946912;
+}
+
+.btn.success:hover {
+  background-color: #065858;
+  border-color: #065858;
+}
+
+img {
+  float: left;
+  text-align:right;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+  border-radius: 50%;
+}
+
+.btn.add{
+  background-color: #BD1C37;
+  border: 1px solid #0C0C0C;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+
+.btn.add:hover {
+  background-color: #D30027;
+  border-color: #CE0026;
+}
+
+.inputClass {
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 25%;
+  margin-bottom: 1.5%;
+  width: 30%
+}
+
+.textareaClass {
+  width: 70%;
+  text-align: center;
+  margin-left: 15%;
+}
